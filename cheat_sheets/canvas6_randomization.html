@@ -33,6 +33,15 @@
             return Math.floor(Math.random() * (max - min + 1) + min)
         }
 
+        // variabel som innholder styrken til skjoldet. 
+
+        let = shield 3
+
+        function shieldPrint () {
+            ctx.font = "30px Arial"
+            ctx.fillText ("Shield " + shield, 800, 40)
+        }
+
         //Funksjon som tegner firkanten
         const hero = {
             fillcolor: "green",
@@ -124,6 +133,8 @@
         function drawElements() {
             //tøm hele canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height)
+            //skriv ut shield text
+            shieldPrint ()
             //tegn firkant
             drawRect()
             //oppdater posisjon til neste tegning
