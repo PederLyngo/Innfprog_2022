@@ -158,6 +158,7 @@
                 ) {
                     //Hvis kollisjon, set colloision til true
                     collision = true
+                    console.log(collision)
                 }
                 //Tegn opp fjell med verdier fra objectet
                 drawMountain(mountain.x, mountain.y, mountain.width, mountain.height)
@@ -165,10 +166,12 @@
 
             //Hvis kollisjon er detektert, tøm canvas og skriv ut game over
             if(collision) {
-                ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+            shield--
+               /* ctx.clearRect(0, 0, canvas.width, canvas.height)
                 ctx.font = "70px Arial"
                 ctx.fillStyle = "red"
-                ctx.fillText("Game Over!", 400, 150)
+                ctx.fillText("Game Over!", 400, 150)*/
             }
             //Hvis helten når høyre side av canvas, tøm canvas og skriv ut vinnertekst
             if(x + hero.width > canvas.width) {
